@@ -1,0 +1,24 @@
+{
+  "name": "bananapassword",
+  "version": "1.0.0",
+  "description": "Banana Password",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server:dev": "nodemon server.js",
+    "build": "webpack -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "s black",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "require": "^2.4.20"
+  },
+  "devDependencies": {
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.2.0"
+  }
+}

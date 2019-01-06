@@ -1,0 +1,107 @@
+*   {
+    box-sizing: border-box;
+    }
+
+:root {
+    --main-bg: #d6c464;
+    --main-yellow: #ffc711;
+    --main-orange: #d6701c;
+    --main-bg-brown: #d6c464;
+    --main-bg-red: #a14e1a;
+
+}
+/*COLOR-SCHEME*/
+/*d6c464-ffc711-d6701c-a14e1a-921b16*/
+
+body {
+    background-color: var(--main-bg);
+}
+
+h2 {
+    text-align: center;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 0.5fr 2fr 1fr 1fr 1fr;
+    max-height: 800px;
+    grid-template-areas:
+            "Heading Heading Heading"
+            "Reserved-1 Logo Reserved-2"
+            /*"Options Options Options"*/
+            "Results Results Results";
+            /*"Footer Footer Footer";*/
+    background-color: var(--main-bg);
+}
+
+.Heading {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "headingleft heading-centre headingright";
+    grid-area: Heading;
+    max-height: 50px;
+}
+
+.headingleft { grid-area: headingleft;
+    max-height: 50px;
+}
+
+.heading-centre { grid-area: heading-centre;
+    text-align: center;
+    font-size: 2rem;
+    max-height: 50px;
+
+}
+
+.headingright { grid-area: headingright;
+    max-height: 50px;
+}
+
+.Reserved-1 { grid-area: Reserved-1;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.Logo { grid-area: Logo;
+    width: 50%;
+    align-content: center;
+    display: block;
+    margin: auto;
+    max-height: 400px;
+}
+
+.Reserved-2 { grid-area: Reserved-2;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.Options {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "option1 option2 option3 option4 option5";
+    grid-area: Options;
+    max-height: 4px;
+}
+
+.option1 { grid-area: option1; text-align: center;
+    font-size: 2rem;}
+
+.option2 { grid-area: option2; text-align: center;
+    font-size: 2rem;}
+
+.option3 { grid-area: option3; text-align: center;
+    font-size: 2rem;}
+
+.option4 { grid-area: option4; text-align: center;
+    font-size: 2rem;}
+
+.option5 { grid-area: option5; text-align: center;
+    font-size: 2rem;}
+
+.Results { grid-area: Results; text-align: center;
+    font-size: 2rem;}
+
+.Footer { grid-area: Footer; text-align: center;
+    font-size: 2rem;}
