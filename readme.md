@@ -12,11 +12,16 @@ Thanks to:
 
 Banana logo from rdevries @ https://openclipart.org/detail/196028/banana
 
-https://www.layoutit.com/ For creating CSS GRID templates
+For creating CSS GRID templates @ https://www.layoutit.com/ 
 
 First Run:
 
 From repository directory.
 
 npm init
+
+```
 npm run build
++
+nodemon run server:dev
+```
