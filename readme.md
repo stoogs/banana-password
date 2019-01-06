@@ -11,6 +11,7 @@ https://www.youtube.com/watch?v=3NjQ9b3pgIg
 Thanks to:
 
 Banana logo from rdevries @ https://openclipart.org/detail/196028/banana
+
 https://www.layoutit.com/ For creating CSS GRID templates
 
 First Run:
