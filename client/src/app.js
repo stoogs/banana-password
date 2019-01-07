@@ -21,6 +21,16 @@ document.addEventListener('DOMContentLoaded', () => {
     //ONE MEGA FUNCTION - TO REFACTOR
     function getWords() {
 
+        //Get value from word-form
+        let formNumWords = document.getElementById("word-form");
+        console.log("You want",formNumWords.elements[0].value, "words");
+        wordsRequired = formNumWords.elements[0].value;
+        //Get value from word-length-form
+        let formWordLength = document.getElementById("word-length-form");
+        console.log("You want", formWordLength.elements[0].value, "letters");
+        minWordLength = formWordLength.elements[0].value;
+
+
         wordList = top10kWords.split(' ');
         console.log("Total Words ", wordList.length);
 
@@ -29,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("Dirty Words ", wordList.length);
 
 //DO REGEXP FUNCTION STUFF & CONVERT TO LOWERCASE
-        let cleanWords = regExCleanUp(wordList)
+        let cleanWords = regExCleanUp(wordList);
 
 //FINAL RESULT
         let results = finalResult(wordsRequired);
@@ -38,10 +48,16 @@ document.addEventListener('DOMContentLoaded', () => {
 //DISPLAY IN RESULTS
 
         let displayWords = document.querySelector(".Results");
-        displayWords.innerHTML =
+        let passwordString = makeString(results)
 
-            `<h1>Your New Password</h1>
-<h2>${results[0]}-${results[1]}-${results[2]}-${results[3]}</h2>`;
+        function makeString(resultsToString){
+            let stringResult = ''
+            for (let i = 0; i < resultsToString.length; i++) {
+                if(i !=0 ? stringResult +=  "-" + resultsToString[i] : stringResult += resultsToString[i]);
+            }
+            return stringResult
+        }
+        displayWords.innerHTML = passwordString;
 
 
         
@@ -69,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         function finalResult(wordsRequired) {
+            console.log("Is this a string?", wordsRequired)
             let result = [];
             let chosenWord = '';
 
