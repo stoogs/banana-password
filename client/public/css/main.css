@@ -7,8 +7,8 @@
     --main-bg: #d6c464;
     --main-yellow: #ffc711;
     --main-orange: #d6701c;
-    --main-bg-brown: #d6c464;
-    --main-bg-red: #a14e1a;
+    --main-bg-brown: #A14E1A;
+    --main-bg-red: #921B16;
 
 }
 /*COLOR-SCHEME*/
@@ -71,6 +71,14 @@ h2 {
     margin: auto;
     max-height: 400px;
 }
+    .Logo:hover {
+        background-color:var(--main-yellow);
+        border-radius: 350px;
+    }
+        .Logo:active {
+            background-color: var(--main-bg-brown) ;
+            border-radius: 400px;
+        }
 
 .Reserved-2 { grid-area: Reserved-2;
     text-align: center;
@@ -112,6 +120,15 @@ h2 {
 
 .option3 { grid-area: option3; text-align: center;
     font-size: 1rem;}
+        #special-character {
+            position: relative;
+            list-style-type:none;
+            font-size: 3rem;
+        }
+        select#special-character {
+            background-color: var(--main-yellow);
+            text-align: center;
+        }
 
 .option4 { grid-area: option4; text-align: center;
     font-size: 1rem;}
