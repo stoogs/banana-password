@@ -21,19 +21,45 @@
     <div class="Reserved-2"></div>
     <div class="Options">
         <div class="option1">
-            <h4>How Many words... Default is 4</h4>
-            <form id="word-form">
-                  <input type=number min="3" max="8" id="word-form" placeholder="default is 6..." rows="1" cols="5" maxlength="5" value="4"></input>
-            </form>
+            <h4>How Many words...</h4>
+            <select id="word-form">
+                <option value="3">3</option>
+                <option selected="selected" value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
         </div>
         <div class="option2">
-            <h4>Word Length... </h4>
-            <form id="word-length-form">
-                <input type=number min="4" max="9" id="word-length-form" placeholder="default is 6..." rows="1" cols="5" maxlength="5" value="6"></input>
-            </form>
+            <h4>Min Word Length...</h4>
+            <select id="word-length-form">
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option selected="selected" value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
         </div>
+
         <div class="option3">
-            <h4>Future</h4>
+            <h4>Change Break Character</h4>
+            <select id="special-character" name="special-character">
+                <ul class="dropdown-options">
+                <option value="!">!</option>
+                <option value="@">@</option>
+                <option value="£">£</option>
+                <option value="$">$</option>
+                <option value="%">%</option>
+                <option value="^">^</option>
+                <option selected="selected" value="-">-</option>
+                <option value="&">&</option>
+                <option value="*">*</option>
+                <option value="(">(</option>
+                <option value=")">)</option>
+                <option value="_">_</option>
+                <option value="+">+</option>
+            </select>
         </div>
         <div class="option4">
             <h4>Future</h4>
