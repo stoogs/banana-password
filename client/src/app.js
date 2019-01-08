@@ -33,12 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
         function getUserChoices() {
             //Get value from word-form
             let formNumWords = document.getElementById("word-form");
-            console.log("You want", formNumWords.elements[0].value, "words");
-            this.wordsRequired = formNumWords.elements[0].value;
+            console.log("You want", formNumWords.value, "words");
+            this.wordsRequired = formNumWords.value;
             //Get value from word-length-form
             let formWordLength = document.getElementById("word-length-form");
-            console.log("You want", formWordLength.elements[0].value, "letters");
-            this.minWordLength = formWordLength.elements[0].value;
+            console.log("You want", formWordLength.value, "letters");
+            this.minWordLength = formWordLength.value;
             console.log("function userChoices Complete");
             //SIMULATE CHOOSING WORDLIST TO USE
             this.userWordListChoice = top10kWords;

@@ -52,7 +52,6 @@ h2 {
     text-align: center;
     font-size: 2rem;
     max-height: 50px;
-
 }
 
 .headingright { grid-area: headingright;
@@ -100,9 +99,8 @@ h2 {
     }
         #word-form {
             font-size: 3rem;
-
         }
-            input#word-form {
+            select#word-form {
                 background-color: var(--main-yellow);
                 text-align: center;
             }
@@ -113,7 +111,7 @@ h2 {
         #word-length-form {
             font-size: 3rem
         }
-            input#word-length-form {
+            select#word-length-form {
                 background-color: var(--main-yellow);
                 text-align: center;
             }
@@ -121,8 +119,6 @@ h2 {
 .option3 { grid-area: option3; text-align: center;
     font-size: 1rem;}
         #special-character {
-            position: relative;
-            list-style-type:none;
             font-size: 3rem;
         }
         select#special-character {
@@ -137,7 +133,14 @@ h2 {
     font-size: 1rem;}
 
 .Results { grid-area: Results; text-align: center;
-    font-size: 2rem;}
+    font-size: 3rem;
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    width: -webkit-fill-available;
+    word-wrap: break-word;
+}
 
 .Footer { grid-area: Footer; text-align: center;
     font-size: 2rem;}
