@@ -24,15 +24,15 @@ h2 {
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 0.5fr 2fr 1fr 1fr 1fr;
-    max-height: 800px;
+    grid-template-rows: 0 1fr 0.5fr 200px 1fr;
     grid-template-areas:
             "Heading Heading Heading"
             "Reserved-1 Logo Reserved-2"
             "Options Options Options"
             "Results Results Results";
-            /*"Footer Footer Footer";*/
+            "Footer Footer Footer";
     background-color: var(--main-bg);
+    grid-gap: 20px;
 }
 
 .Heading {
@@ -42,6 +42,8 @@ h2 {
     grid-template-areas: "headingleft heading-centre headingright";
     grid-area: Heading;
     max-height: 50px;
+    min-height: 50px;
+    padding: 1rem;
 }
 
 .headingleft { grid-area: headingleft;
@@ -49,9 +51,9 @@ h2 {
 }
 
 .heading-centre { grid-area: heading-centre;
-    text-align: center;
-    font-size: 2rem;
-    max-height: 50px;
+    /*text-align: center;*/
+    /*font-size: 2rem;*/
+    /*max-height: 50px;*/
 }
 
 .headingright { grid-area: headingright;
@@ -64,19 +66,22 @@ h2 {
 }
 
 .Logo { grid-area: Logo;
-    width: 50%;
-    align-content: center;
-    display: block;
-    margin: auto;
-    max-height: 400px;
+    /*width: 50%;*/
+    /*align-content: center;*/
+    /*display: block;*/
+    /*margin: auto;*/
+    /*max-height: 400px;*/
+    /*padding: 1rem;*/
 }
     .Logo:hover {
+        color: #921B16;
+        box-shadow: blue;
         background-color:var(--main-yellow);
-        border-radius: 350px;
+        border-radius: 100%;
     }
         .Logo:active {
             background-color: var(--main-bg-brown) ;
-            border-radius: 400px;
+            border-radius: 50%;
         }
 
 .Reserved-2 { grid-area: Reserved-2;
@@ -90,12 +95,11 @@ h2 {
     grid-template-rows: 1fr;
     grid-template-areas: "option1 option2 option3 option4 option5";
     grid-area: Options;
-    max-height: 4px;
+    /*max-height: 4px;*/
 }
 
 .option1 { grid-area: option1; text-align: center;
     font-size: 1rem;
-    line-height: 1.5;
     }
         #word-form {
             font-size: 3rem;
@@ -109,7 +113,7 @@ h2 {
     font-size: 1rem;}
 
         #word-length-form {
-            font-size: 3rem
+            font-size: 3rem;
         }
             select#word-length-form {
                 background-color: var(--main-yellow);
@@ -134,10 +138,6 @@ h2 {
 
 .Results { grid-area: Results; text-align: center;
     font-size: 3rem;
-    margin-top: 3rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: auto;
     width: -webkit-fill-available;
     word-wrap: break-word;
 }
