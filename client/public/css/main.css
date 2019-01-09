@@ -142,6 +142,13 @@ h2 {
 
 .option5 { grid-area: option5; text-align: center;
     font-size: 1rem;}
+        #word-count {
+            font-size: 3rem;
+        }
+        select#word-count {
+    background-color: var(--main-yellow);
+    text-align: center;
+}
 
 .Results { grid-area: Results; text-align: center;
     font-size: 3rem;
