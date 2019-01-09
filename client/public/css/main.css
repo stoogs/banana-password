@@ -16,6 +16,8 @@
 
 body {
     background-color: var(--main-bg);
+    max-width: 400px;
+    margin: auto;
 }
 
 h2 {
@@ -32,7 +34,6 @@ h2 {
             "Results Results Results";
             "Footer Footer Footer";
     background-color: var(--main-bg);
-    grid-gap: 20px;
 }
 
 .Heading {
@@ -95,6 +96,7 @@ h2 {
     grid-template-rows: 1fr;
     grid-template-areas: "option1 option2 option3 option4 option5";
     grid-area: Options;
+    grid-gap: 5px;
     /*max-height: 4px;*/
 }
 
@@ -102,7 +104,7 @@ h2 {
     font-size: 1rem;
     }
         #word-form {
-            font-size: 3rem;
+            font-size: 2rem;
         }
             select#word-form {
                 background-color: var(--main-yellow);
@@ -113,7 +115,7 @@ h2 {
     font-size: 1rem;}
 
         #word-length-form {
-            font-size: 3rem;
+            font-size: 2rem;
         }
             select#word-length-form {
                 background-color: var(--main-yellow);
@@ -123,7 +125,7 @@ h2 {
 .option3 { grid-area: option3; text-align: center;
     font-size: 1rem;}
         #special-character {
-            font-size: 3rem;
+            font-size: 2rem;
         }
         select#special-character {
             background-color: var(--main-yellow);
@@ -133,7 +135,7 @@ h2 {
 .option4 { grid-area: option4; text-align: center;
     font-size: 1rem;}
         #l33t {
-            font-size: 3rem;
+            font-size: 2rem;
         }
         select#l33t {
             background-color: var(--main-yellow);
@@ -143,7 +145,7 @@ h2 {
 .option5 { grid-area: option5; text-align: center;
     font-size: 1rem;}
         #word-count {
-            font-size: 3rem;
+            font-size: 2rem;
         }
         select#word-count {
     background-color: var(--main-yellow);
