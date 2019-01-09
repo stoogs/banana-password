@@ -9,10 +9,13 @@ const Password = function () {
     this.wordsRequired = 4; //DEFAULT
     this.minWordLength = 6; //DEFAULT
     this.specialCharacter = "-"; //DEFAULT
+    this.l33t = "poo";
     this.userWordListChoice = ''; //TODO LET USER CHOICE FROM LISTS OF WORDS
     this.wordsToCarryAround = []; //FOR FILTERING PURPOSES
     this.cleanWords = "clean";  //LIST OF ALL THE WORDS TO CHOOOSE FROM
-    this.finalResult = [] //ARRAY OF FINAL WORDS
+    this.arrayOfFilteredWords = [] //ARRAY OF FINAL WORDS
+    this.passwordString = "makString()";
+    this.finishedPassword ="error"
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -26,8 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
         getUserChoices();  //NUM WORDS, WORD LENGTH
         prepareWords(); //FILTER TO LENGTH, REGEX TO a-Z
         finalResult(); //MAKE AN ARRAY OF THE NICE WORDS
-        displayResults(); //DISPLAY IN GRID CONTAINER RESULTS
-        console.log(this.finalResult);//TODO ARRAY OF WORDS TO CLICK AND CHANGE INDIVIDUALLY
+        prepareResults(); //PREPARE RESULTS - APPLY BREAK, L33T, SUBS.
+        console.log(this.arrayOfFilteredWords);//TODO ARRAY OF WORDS TO CLICK AND CHANGE INDIVIDUALLY
+        l33tFunction();
+        displayPassword();
 
         //FUNCTIONS FROM beginFiltering function
         function getUserChoices() {
@@ -42,12 +47,14 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log("function userChoices Complete");
             //SIMULATE CHOOSING WORDLIST TO USE
             this.userWordListChoice = top10kWords;
-            //TODO MAKEL33T FUNCTION
             //GET DROPDOWN VALUE OF !@£$%^&*()_+
             let getSpecialCharacter = document.getElementById("special-character");
             this.specialCharacter = getSpecialCharacter.value;
             console.log("You want a special character of ", this.specialCharacter);
-            }
+            //MAKE L33T FUNCTION
+            let formL33tCheckBox = document.getElementById("l33t");
+            this.l33t = formL33tCheckBox.value;
+        }
 
         function prepareWords() {
             //SPLIT HUGE LIST INTO ARRAY OF WORDS
@@ -92,23 +99,63 @@ document.addEventListener('DOMContentLoaded', () => {
                 chosenWord = this.cleanWords[Math.floor(Math.random() * cleanWords.length)];
                 result.push(chosenWord)
             }
-            this.finalResult = result
+            this.arrayOfFilteredWords = result
         }
-        function displayResults() {
-            let displayWords = document.querySelector(".Results");
-            let passwordString = makeString(this.finalResult);
+
+        function prepareResults() {
+
+            this.passwordString = makeString(this.arrayOfFilteredWords);
 
             function makeString(resultsToString) {
                 let stringResult = '';
 
                 for (let i = 0; i < resultsToString.length; i++) {
-                    if (i != 0 ? stringResult += this.specialCharacter + resultsToString[i] : stringResult += resultsToString[i]);
+                    if (i != 0 ? stringResult += this.specialCharacter + resultsToString[i] : stringResult += resultsToString[i]) ;
                 }
                 return stringResult
             }
-            displayWords.innerHTML = passwordString;
+
+            // displayWords.innerHTML = passwordString;
         }
+
+        function l33tFunction() {
+
+            if (this.l33t === "true") {
+                console.log(this.l33t, "FUNCTION L33T IN YOU");
+                let convertToL33t = this.passwordString.split('');
+
+                for (let i = 0; i < convertToL33t.length; i++) {
+                    if (convertToL33t[i] === 'e') {
+                        convertToL33t[i] = "3"
+                    } else if (convertToL33t[i] === 'a') {
+                        convertToL33t[i] = "4"
+                    } else if (convertToL33t[i] === 'o') {
+                        convertToL33t[i] = "0"
+                    } else if (convertToL33t[i] === 'i') {
+                        convertToL33t[i] = "1"
+                    }
+                }
+
+                console.log(convertToL33t.join(''))
+                this.l33tPassword = convertToL33t.join('');
+                console.log(this.l33tPassword)
+            }
+
+        }
+
+        function displayPassword() {
+            let finalResult = document.querySelector(".Results");
+
+            if (this.l33t === "true") {
+                finalResult.innerHTML = `${this.passwordString} <br> --------<br>${this.l33tPassword}`
+            } else {
+                finalResult.innerHTML = this.passwordString
+            }
+        }
+
     }
+
+
 });
 
 //EVERY DAY WORDS
