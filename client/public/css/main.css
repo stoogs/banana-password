@@ -31,7 +31,7 @@ h2 {
             "Heading Heading Heading"
             "Reserved-1 Logo Reserved-2"
             "Options Options Options"
-            "Results Results Results";
+            "Results Results Results"
             "Footer Footer Footer";
     background-color: var(--main-bg);
 }
@@ -96,8 +96,10 @@ h2 {
     grid-template-rows: 1fr;
     grid-template-areas: "option1 option2 option3 option4 option5";
     grid-area: Options;
-    grid-gap: 5px;
-    /*max-height: 4px;*/
+    grid-gap: 1%;
+    max-width: 90%;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .option1 { grid-area: option1; text-align: center;
