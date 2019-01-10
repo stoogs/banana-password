@@ -16,8 +16,6 @@
 
 body {
     background-color: var(--main-bg);
-    max-width: 400px;
-    margin: auto;
 }
 
 h2 {
@@ -42,13 +40,9 @@ h2 {
     grid-template-rows: 1fr;
     grid-template-areas: "headingleft heading-centre headingright";
     grid-area: Heading;
-    max-height: 50px;
-    min-height: 50px;
-    padding: 1rem;
 }
 
 .headingleft { grid-area: headingleft;
-    max-height: 50px;
 }
 
 .heading-centre { grid-area: heading-centre;
@@ -58,12 +52,11 @@ h2 {
 }
 
 .headingright { grid-area: headingright;
-    max-height: 50px;
 }
 
 .Reserved-1 { grid-area: Reserved-1;
-    text-align: center;
-    font-size: 2rem;
+    /*text-align: center;*/
+    /*font-size: 2rem;*/
 }
 
 .Logo { grid-area: Logo;
@@ -86,8 +79,8 @@ h2 {
         }
 
 .Reserved-2 { grid-area: Reserved-2;
-    text-align: center;
-    font-size: 2rem;
+    /*text-align: center;*/
+    /*font-size: 2rem;*/
 }
 
 .Options {
@@ -97,7 +90,6 @@ h2 {
     grid-template-areas: "option1 option2 option3 option4 option5";
     grid-area: Options;
     grid-gap: 1%;
-    max-width: 90%;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -106,7 +98,7 @@ h2 {
     font-size: 1rem;
     }
         #word-form {
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
             select#word-form {
                 background-color: var(--main-yellow);
@@ -117,7 +109,7 @@ h2 {
     font-size: 1rem;}
 
         #word-length-form {
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
             select#word-length-form {
                 background-color: var(--main-yellow);
@@ -127,7 +119,7 @@ h2 {
 .option3 { grid-area: option3; text-align: center;
     font-size: 1rem;}
         #special-character {
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
         select#special-character {
             background-color: var(--main-yellow);
@@ -137,7 +129,7 @@ h2 {
 .option4 { grid-area: option4; text-align: center;
     font-size: 1rem;}
         #l33t {
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
         select#l33t {
             background-color: var(--main-yellow);
@@ -147,7 +139,7 @@ h2 {
 .option5 { grid-area: option5; text-align: center;
     font-size: 1rem;}
         #word-count {
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
         select#word-count {
     background-color: var(--main-yellow);
