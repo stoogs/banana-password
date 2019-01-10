@@ -8,16 +8,22 @@ install git, install nodejs and clone repository.
 
 in repository root directory.
 
-`npm install`  #installs package.json dependencies
+`npm install`  
+
+installs package.json dependencies
+
 also
-`sudo npm install -g nodemon`   #keeps node running during changes
+
+`sudo npm install -g nodemon`  
+
+keeps node running during changes
 
 From repository directory.
 In two terminals set to run...
 
 ```
 npm run build
-+
+      +
 npm run server:dev
 ```
 
