@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function displayPassword() {
             let finalResult = document.querySelector(".Results");
-
+            finalResult.innerHTML = "Processing...";
             if (this.l33t === "true") {
                 finalResult.innerHTML = `${this.passwordString} <br> --------<br>${this.l33tPassword}`
             } else {
