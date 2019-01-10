@@ -18,6 +18,7 @@
 
 body {
     background-color: var(--main-bg);
+
 }
 
 h2 {
@@ -34,12 +35,12 @@ h2 {
             "Results Results Results"
             "Footer Footer Footer";
     background-color: var(--main-bg);
-    max-width:800px;
+    /*max-width:800px;*/
 }
 
         @media screen and (max-width: 375px) {
             /* comes into effect for screens less than or equal to 320 pixels */
-            .grid-container {
+            .body {
                 width: 325px ;
                 margin:auto;
             }
@@ -47,7 +48,7 @@ h2 {
 
 @media screen and (max-width: 360px) {
     /* comes into effect for screens less than or equal to 320 pixels */
-    .grid-container {
+    .body {
         width: 315px ;
         margin:auto;
     }
