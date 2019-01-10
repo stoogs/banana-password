@@ -60,11 +60,11 @@ h2 {
 }
 
 .Logo { grid-area: Logo;
-    /*width: 50%;*/
-    /*align-content: center;*/
+    width: 95%;
+    align-content: center;
     /*display: block;*/
     /*margin: auto;*/
-    /*max-height: 400px;*/
+    /*max-width: 80%;*/
     /*padding: 1rem;*/
 }
     .Logo:hover {
