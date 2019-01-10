@@ -41,7 +41,6 @@ h2 {
             /* comes into effect for screens less than or equal to 320 pixels */
             .grid-container {
                 width: 375px ;
-                padding-right:10px;
             }
         }
 
@@ -49,7 +48,6 @@ h2 {
     /* comes into effect for screens less than or equal to 320 pixels */
     .grid-container {
         width: 360px ;
-        padding-right:10px;
     }
 }
 
