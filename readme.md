@@ -2,11 +2,26 @@ Banana Password
 
 A simple random password generator using dictionary words from a list of the top 100,000 words in the English language.
 
-Inspired by 
-XKCD - https://xkcd.com/936/
+First Run:
 
-Computerphile ep. 'How to Choose a Password'
-https://www.youtube.com/watch?v=3NjQ9b3pgIg
+install git, install nodejs and clone repository.
+
+in repository root directory.
+
+'npm install'   #installs package.json dependencies
+also
+'sudo npm install -g nodemon'
+
+From repository directory.
+
+```
+npm run build
++
+nodemon run server:dev
+```
+
+Open browser and go to 'localhost:3000'
+
 
 Thanks to:
 
@@ -14,14 +29,8 @@ Banana logo from rdevries @ https://openclipart.org/detail/196028/banana
 
 For creating CSS GRID templates @ https://www.layoutit.com/ 
 
-First Run:
+Inspired by 
+XKCD - https://xkcd.com/936/
 
-From repository directory.
-
-npm init
-
-```
-npm run build
-+
-nodemon run server:dev
-```
+Computerphile ep. 'How to Choose a Password'
+https://www.youtube.com/watch?v=3NjQ9b3pgIg
