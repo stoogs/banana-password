@@ -1,31 +1,31 @@
-Banana Password
+<b>Banana Password</b>
 
 A simple random password generator using dictionary words from a list of the top 30,000 words in the English language.
 
 -----------------First Run------------------------
 
-install git, install nodejs and clone repository.
+install git, install nodejs, install npm and clone repository.
 
 in repository root directory.
 
-`npm install`  
+      `npm install`  
 
 installs package.json dependencies
 
-also
+      +
 
-`sudo npm install -g nodemon`  
+      `sudo npm install -g nodemon`  
 
 keeps node running during changes
 
 From repository directory.
 In two terminals set to run...
 
-```
-npm run build
-      +
-npm run server:dev
-```
+      ```
+      npm run build
+          +
+      npm run server:dev
+      ```
 
 Open browser and go to 'localhost:3000'
 
