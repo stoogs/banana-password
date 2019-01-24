@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
             this.wordsToCarryAround = createMinimumWordLengthArray(this.wordsToCarryAround, word => word.length >= this.minWordLength);
             console.log("Dirty Words ", this.wordsToCarryAround.length);
             //DO REGEXP FUNCTION STUFF & CONVERT TO LOWERCASE
+            console.log(this.wordsToCarryAround);
             this.cleanWords = regExCleanUp(this.wordsToCarryAround);
             console.log("function prepareWords Complete");
 
@@ -93,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             function regExCleanUp(words) {
-                const regExFilter = new RegExp(/[^a-zA-Z ]/g);
+                const regExFilter = new RegExp(/[^a-zA-Z\r ]/g);
                 let arrayLength = words.length; //?
                 let cleanWords = [];
                 for (let i = 0; i < arrayLength; i++) {
@@ -109,9 +110,22 @@ document.addEventListener('DOMContentLoaded', () => {
         function finalResult() {
             let result = [];
             let chosenWord = '';
+            let testChosenWord = [];
+
+
 
             for (let i = 0; i < this.wordsRequired; i++) {
                 chosenWord = this.cleanWords[Math.floor(Math.random() * cleanWords.length)];
+
+                testChosenWord = chosenWord.split('');
+                for (let j=0; j < testChosenWord.length; j++) {
+                    if (testChosenWord[j] == "0") {
+                        console.log("***********NUMBER ALERT*******");
+                        console.log("***********BAD WORD WAS*******", chosenWord);
+                        chosenWord = this.cleanWords[Math.floor(Math.random() * cleanWords.length)];
+                        break;
+                    }
+                }
                 result.push(chosenWord)
             }
             this.arrayOfFilteredWords = result
