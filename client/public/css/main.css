@@ -33,6 +33,7 @@ h2 {
             "Footer Footer Footer";
     background-color: var(--main-bg);
     grid-gap: 20px;
+    max-width:800px;
 }
 
 .Heading {
@@ -151,7 +152,7 @@ h2 {
 }
 
 .Results { grid-area: Results; text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     width: -webkit-fill-available;
     word-wrap: break-word;
 }
