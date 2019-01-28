@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad8640c7-22d3-4954-bd3d-b6511fcfe563" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/js/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/js/bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dictionary/top20kWords.js" beforeDir="false" afterPath="$PROJECT_DIR$/dictionary/top20kWords.js" afterDir="false" />
-    </list>
+    <list default="true" id="ad8640c7-22d3-4954-bd3d-b6511fcfe563" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -26,8 +21,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/client/src/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="368">
-                  <caret line="125" column="30" lean-forward="true" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="30" />
+                <state relative-caret-position="234">
+                  <caret line="120" column="47" lean-forward="true" selection-start-line="120" selection-start-column="47" selection-end-line="120" selection-end-column="47" />
                 </state>
               </provider>
             </entry>
@@ -238,10 +233,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="201" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="2359" />
+    <option name="width" value="2560" />
     <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -340,12 +334,12 @@
       <workItem from="1547026047680" duration="1664000" />
       <workItem from="1547141840994" duration="3827000" />
       <workItem from="1547155616031" duration="3120000" />
-      <workItem from="1548335960855" duration="5441000" />
+      <workItem from="1548335960855" duration="5755000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63384000" />
+    <option name="totallyTimeSpent" value="63698000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1057" extended-state="6" />
@@ -506,8 +500,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="125" column="30" lean-forward="true" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="30" />
+        <state relative-caret-position="234">
+          <caret line="120" column="47" lean-forward="true" selection-start-line="120" selection-start-column="47" selection-end-line="120" selection-end-column="47" />
         </state>
       </provider>
     </entry>
