@@ -32,7 +32,7 @@ h2 {
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 0 1fr 0.25fr 0.25fr 0.1fr;
+    grid-template-rows: 0 1fr 0.5fr 0.25fr 0.1fr;
     grid-template-areas:
             "Heading Heading Heading"
             "Reserved-1 Logo Reserved-2"
