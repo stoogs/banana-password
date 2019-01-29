@@ -160,15 +160,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function displayPassword() {
             let finalResult = document.querySelector(".Results");
+
             //SHOW A HEADING OF WORDS IN LIST
-
-
-
+            //DISPLAY PASSWORD IN RESULTS
             if (this.l33t === "true") {
                 finalResult.innerHTML = `${this.passwordString} <br> --------<br>${this.l33tPassword}`
             } else {
-                finalResult.innerHTML = `<h4>${this.passwordString}</h4><br><br>${this.passwordString.length} Characters<br><br>Chosen from ${this.cleanWords.length} Words`
+                finalResult.innerHTML = this.passwordString
             }
+
+            //DISPLAY ADDITIONAL INFORMATION IN FOOTER
+            let footerInformation = document.querySelector(".Footer");
+            footerInformation.innerHTML = `<h4></h4><br><br>${this.passwordString.length} Characters chosen from ${this.cleanWords.length} Words`
+
+
         }
+
     }
 });

@@ -1,7 +1,8 @@
+
 *   {
     box-sizing: border-box;
     /*border-style: solid;*/
-   }
+}
 
 :root {
     --main-bg: #d6c464;
@@ -13,9 +14,16 @@
 }
 /*COLOR-SCHEME*/
 /*d6c464-ffc711-d6701c-a14e1a-921b16*/
+/* code that is here, until the first @media block, will apply to any screen size */
+
 
 body {
     background-color: var(--main-bg);
+    /*margin-right: 8px;*/
+    max-width: 1024px;  /*iPad Pro res*/
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 0;
 }
 
 h2 {
@@ -24,16 +32,16 @@ h2 {
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 0 1fr 0.5fr 200px 1fr;
+    grid-template-rows: 0 1fr 0.25fr 0.25fr 0.1fr;
     grid-template-areas:
             "Heading Heading Heading"
             "Reserved-1 Logo Reserved-2"
             "Options Options Options"
-            "Results Results Results";
+            "Results Results Results"
             "Footer Footer Footer";
     background-color: var(--main-bg);
-    grid-gap: 20px;
-    max-width:800px;
+    margin: 0 8px;
+
 }
 
 .Heading {
@@ -42,52 +50,36 @@ h2 {
     grid-template-rows: 1fr;
     grid-template-areas: "headingleft heading-centre headingright";
     grid-area: Heading;
-    max-height: 50px;
-    min-height: 50px;
-    padding: 1rem;
 }
 
 .headingleft { grid-area: headingleft;
-    max-height: 50px;
 }
 
 .heading-centre { grid-area: heading-centre;
-    /*text-align: center;*/
-    /*font-size: 2rem;*/
-    /*max-height: 50px;*/
 }
 
 .headingright { grid-area: headingright;
-    max-height: 50px;
 }
 
 .Reserved-1 { grid-area: Reserved-1;
-    text-align: center;
-    font-size: 2rem;
 }
 
 .Logo { grid-area: Logo;
-    /*width: 50%;*/
-    /*align-content: center;*/
-    /*display: block;*/
-    /*margin: auto;*/
-    /*max-height: 400px;*/
-    /*padding: 1rem;*/
+    width: 50vw;
+    align-content: center;
 }
-    .Logo:hover {
-        color: #921B16;
-        box-shadow: blue;
-        background-color:var(--main-yellow);
-        border-radius: 100%;
-    }
-        .Logo:active {
-            background-color: var(--main-bg-brown) ;
-            border-radius: 50%;
-        }
+.Logo:hover {
+    color: #921B16;
+    box-shadow: blue;
+    background-color:var(--main-yellow);
+    border-radius: 100%;
+}
+.Logo:active {
+    background-color: var(--main-bg-brown) ;
+    border-radius: 50%;
+}
 
 .Reserved-2 { grid-area: Reserved-2;
-    text-align: center;
-    font-size: 2rem;
 }
 
 .Options {
@@ -96,63 +88,63 @@ h2 {
     grid-template-rows: 1fr;
     grid-template-areas: "option1 option2 option3 option4 option5";
     grid-area: Options;
-    /*max-height: 4px;*/
 }
 
 .option1 { grid-area: option1; text-align: center;
     font-size: 1rem;
-    }
-        #word-form {
-            font-size: 3rem;
-        }
-            select#word-form {
-                background-color: var(--main-yellow);
-                text-align: center;
-            }
+}
+#word-form {
+    font-size: 1.5rem;
+
+}
+select#word-form {
+    background-color: var(--main-yellow);
+
+}
 
 .option2 { grid-area: option2; text-align: center;
     font-size: 1rem;}
 
-        #word-length-form {
-            font-size: 3rem;
-        }
-            select#word-length-form {
-                background-color: var(--main-yellow);
-                text-align: center;
-            }
+#word-length-form {
+    font-size: 1.5rem;
+}
+select#word-length-form {
+    background-color: var(--main-yellow);
+    text-align: center;
+}
 
 .option3 { grid-area: option3; text-align: center;
     font-size: 1rem;}
-        #special-character {
-            font-size: 3rem;
-        }
-        select#special-character {
-            background-color: var(--main-yellow);
-            text-align: center;
-        }
+#special-character {
+    font-size: 1.5rem;
+}
+select#special-character {
+    background-color: var(--main-yellow);
+    text-align: center;
+}
 
 .option4 { grid-area: option4; text-align: center;
     font-size: 1rem;}
-        #l33t {
-            font-size: 3rem;
-        }
-        select#l33t {
-            background-color: var(--main-yellow);
-            text-align: center;
-        }
+#l33t {
+    font-size: 1.5rem;
+}
+select#l33t {
+    background-color: var(--main-yellow);
+    text-align: center;
+}
 
 .option5 { grid-area: option5; text-align: center;
     font-size: 1rem;}
-        #word-count {
-            font-size: 3rem;
-        }
-        select#word-count {
+#word-count {
+    font-size: 1.5rem;
+}
+select#word-count {
     background-color: var(--main-yellow);
     text-align: center;
 }
 
 .Results { grid-area: Results; text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
     width: -webkit-fill-available;
     word-wrap: break-word;
 }
