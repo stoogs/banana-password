@@ -5,15 +5,17 @@ const top20kWords = require('../../dictionary/top20kWords');
 const top30kWords = require('../../dictionary/top30kWords');
 
 const Password = function () {
+//ALL USER SELECTED VARIABLES INITIALIZED AS DEFAULT HERE
     this.wordsRequired = 4; //DEFAULT
     this.minWordLength = 6; //DEFAULT
     this.specialCharacter = "-"; //DEFAULT
     this.l33t = "false"; //DEFAULT
-    this.howManyWords = "1k" //DEFAULT
-    this.userWordListChoice = top1kWords; // DEFAULT,  LET USER CHOICE FROM LISTS OF WORDS
-    this.wordsToCarryAround = []; //FOR FILTERING PURPOSES
-    this.cleanWords = "clean";  //LIST OF ALL THE WORDS TO CHOOOSE FROM
-    this.arrayOfFilteredWords = [] //ARRAY OF FINAL WORDS
+    this.userWordsChosen = "1k"; // DEFAULT,  LET USER CHOICE FROM LISTS OF WORDS
+//START CRUNCHING THROUGH userWords TILL END RESULT
+    this.userWords = ""; //WORDS WE START WITH
+    this.wordsOfCorrectLength = []; //WORDS OF MINIMUM LENGTH
+    this.cleanWords = "clean";  //LIST OF ALL THE WORDS TO CHOOSE FROM
+    this.arrayOfFilteredWords = []; //ARRAY OF FINAL WORDS
     this.passwordString = "makString()";
     this.finishedPassword ="error"
 };
@@ -22,13 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('JavaScript loaded from bundle.js to app.js');
 
     let generate = document.querySelector(".Logo");
-    generate.addEventListener("click", function() {beginFiltering()});
+    generate.addEventListener("click", function() {bananaClicked()});
 
     //RUN FUNCTIONS SYNCHRONOUSLY
-    function beginFiltering() {
-        getUserChoices();  //NUM WORDS, WORD LENGTH, BREAK CHR, L33T, WORDCOUNT
-        createWordList(); //MAKE 1K-30K WORDLIST
-        prepareWords(); //FILTER TO LENGTH, REGEX TO a-Z
+    function bananaClicked() {
+        /*OK*/getUserChoices();  //NUM WORDS, WORD LENGTH, BREAK CHR, L33T, WORDCOUNT
+        /*OK*/createWordList(); //MAKE 1K-30K WORDLIST
+        /*OK*/prepareWords(); //FILTER TO LENGTH, REGEX TO a-Z
         finalResult(); //MAKE AN ARRAY OF THE NICE WORDS
         prepareResults(); //PREPARE RESULTS - APPLY BREAK, L33T, SUBS.
         console.log(this.arrayOfFilteredWords);//TODO ARRAY OF WORDS TO CLICK AND CHANGE INDIVIDUALLY
@@ -45,42 +47,40 @@ document.addEventListener('DOMContentLoaded', () => {
             let formWordLength = document.getElementById("word-length-form");
             console.log("You want", formWordLength.value, "letters");
             this.minWordLength = formWordLength.value;
-            console.log("function userChoices Complete");
             //GET DROPDOWN VALUE OF !@£$%^&*()_+
             let getSpecialCharacter = document.getElementById("special-character");
             this.specialCharacter = getSpecialCharacter.value;
-            console.log("You want a special character of ", this.specialCharacter);
             //MAKE L33T FUNCTION
             let formL33tCheckBox = document.getElementById("l33t");
             this.l33t = formL33tCheckBox.value;
             //CHOOSE WORDLIST TO USE
             let wordListChoice = document.getElementById("word-count");
-            this.howManyWords = wordListChoice.value;
+            this.userWordsChosen = wordListChoice.value;
         }
 
         function createWordList() {
-            if (this.howManyWords === '1k') {
-                this.userWordListChoice = top1kWords;
-            } else if (this.howManyWords === '10k') {
-                this.userWordListChoice = top1kWords + top10kWords;
-            } else if (this.howManyWords === '20k') {
-                this.userWordListChoice = top1kWords + top10kWords + top20kWords;
-            } else if (this.howManyWords === '30k') {
-                this.userWordListChoice = top1kWords + top10kWords + top20kWords + top30kWords;
+            if (this.userWordsChosen === '1k') {
+                this.userWords = top1kWords;
+            } else if (this.userWordsChosen === '10k') {
+                this.userWords = top1kWords + top10kWords;
+            } else if (this.userWordsChosen === '20k') {
+                this.userWords = top1kWords + top10kWords + top20kWords;
+            } else if (this.userWordsChosen === '30k') {
+                this.userWords = top1kWords + top10kWords + top20kWords + top30kWords;
             }
-            console.log("HOW MANY",this.howManyWords)
         }
 
         function prepareWords() {
-            //SPLIT HUGE LIST INTO ARRAY OF WORDS
-            this.wordsToCarryAround = this.userWordListChoice.split(' ');
-            console.log("Total Words ", this.wordsToCarryAround.length);
+        //SPLIT STRING INTO ARRAY OF WORDS
+        this.userWords = this.userWords.split(' ');
+        console.log("Total Words ", this.userWords.length);
+
             //MIN WORD LENGTH DEFINED BY USER
-            this.wordsToCarryAround = createMinimumWordLengthArray(this.wordsToCarryAround, word => word.length >= this.minWordLength);
-            console.log("Dirty Words ", this.wordsToCarryAround.length);
+            this.wordsOfCorrectLength = createMinimumWordLengthArray(this.userWords, word => word.length >= this.minWordLength);
+            console.log(" Words ", this.userWords.length);
             //DO REGEXP FUNCTION STUFF & CONVERT TO LOWERCASE
-            this.cleanWords = regExCleanUp(this.wordsToCarryAround);
-            console.log("function prepareWords Complete");
+            this.cleanWords = regExCleanUp(this.wordsOfCorrectLength);
+            console.log("regEX Completed");
 
             function createMinimumWordLengthArray(array, test) {
                 let passed = [];
@@ -92,8 +92,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 return passed;
             }
 
+            //REMOVE ANY FOREIGN CHARACTERS & CONVERT TO LOWERCASE WILE ITERATING
             function regExCleanUp(words) {
-                const regExFilter = new RegExp(/[^a-zA-Z ]/g);
+                const regExFilter = new RegExp(/[^a-zA-Z]/g);
                 let arrayLength = words.length; //?
                 let cleanWords = [];
                 for (let i = 0; i < arrayLength; i++) {
@@ -101,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         cleanWords.push(words[i].toLowerCase())
                     }
                 }
-                console.log("Clean Words ", cleanWords.length)
+                console.log("Clean Words ", cleanWords.length);
                 return cleanWords;
             }
         }
@@ -160,24 +161,20 @@ document.addEventListener('DOMContentLoaded', () => {
         function displayPassword() {
             let finalResult = document.querySelector(".Results");
 
+            //SHOW A HEADING OF WORDS IN LIST
+            //DISPLAY PASSWORD IN RESULTS
             if (this.l33t === "true") {
                 finalResult.innerHTML = `${this.passwordString} <br> --------<br>${this.l33tPassword}`
             } else {
                 finalResult.innerHTML = this.passwordString
             }
+
+            //DISPLAY ADDITIONAL INFORMATION IN FOOTER
+            let footerInformation = document.querySelector(".Footer");
+            footerInformation.innerHTML = `<h4></h4><br><br>${this.passwordString.length} Characters chosen from ${this.cleanWords.length} Words`
+
+
         }
+
     }
 });
-
-//EVERY DAY WORDS
-// //Prepare Characters for Array
-// let splitWords = top1kWords.split('\n');
-// //Filter words to be of a minimum determined size
-// let minWordLength = 7;
-// let minWordLengthArray = createMinimumWordLengthArray(splitWords, word => word.length > minWordLength);
-// console.log(minWordLengthArray)
-// console.log(minWordLengthArray.length)
-// console.log(top10kWords.split(' '))
-// console.log(top20kWords.split(' ').length)
-// filter function.
-
