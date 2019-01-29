@@ -1,7 +1,8 @@
+
 *   {
     box-sizing: border-box;
     /*border-style: solid;*/
-   }
+}
 
 :root {
     --main-bg: #d6c464;
@@ -31,7 +32,7 @@ h2 {
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 0 1fr 0.5fr 200px 1fr;
+    grid-template-rows: 0 1fr 0.25fr 0.25fr 0.1fr;
     grid-template-areas:
             "Heading Heading Heading"
             "Reserved-1 Logo Reserved-2"
@@ -67,16 +68,16 @@ h2 {
     width: 50vw;
     align-content: center;
 }
-    .Logo:hover {
-        color: #921B16;
-        box-shadow: blue;
-        background-color:var(--main-yellow);
-        border-radius: 100%;
-    }
-        .Logo:active {
-            background-color: var(--main-bg-brown) ;
-            border-radius: 50%;
-        }
+.Logo:hover {
+    color: #921B16;
+    box-shadow: blue;
+    background-color:var(--main-yellow);
+    border-radius: 100%;
+}
+.Logo:active {
+    background-color: var(--main-bg-brown) ;
+    border-radius: 50%;
+}
 
 .Reserved-2 { grid-area: Reserved-2;
 }
@@ -92,52 +93,52 @@ h2 {
 .option1 { grid-area: option1; text-align: center;
     font-size: 1rem;
 }
-        #word-form {
-            font-size: 1.5rem;
+#word-form {
+    font-size: 1.5rem;
 
-        }
-            select#word-form {
-                background-color: var(--main-yellow);
+}
+select#word-form {
+    background-color: var(--main-yellow);
 
-            }
+}
 
 .option2 { grid-area: option2; text-align: center;
     font-size: 1rem;}
 
-        #word-length-form {
-            font-size: 1.5rem;
-        }
-            select#word-length-form {
-                background-color: var(--main-yellow);
-                text-align: center;
-            }
+#word-length-form {
+    font-size: 1.5rem;
+}
+select#word-length-form {
+    background-color: var(--main-yellow);
+    text-align: center;
+}
 
 .option3 { grid-area: option3; text-align: center;
     font-size: 1rem;}
-        #special-character {
-            font-size: 1.5rem;
-        }
-        select#special-character {
-            background-color: var(--main-yellow);
-            text-align: center;
-        }
+#special-character {
+    font-size: 1.5rem;
+}
+select#special-character {
+    background-color: var(--main-yellow);
+    text-align: center;
+}
 
 .option4 { grid-area: option4; text-align: center;
     font-size: 1rem;}
-        #l33t {
-            font-size: 1.5rem;
-        }
-        select#l33t {
-            background-color: var(--main-yellow);
-            text-align: center;
-        }
+#l33t {
+    font-size: 1.5rem;
+}
+select#l33t {
+    background-color: var(--main-yellow);
+    text-align: center;
+}
 
 .option5 { grid-area: option5; text-align: center;
     font-size: 1rem;}
-        #word-count {
-            font-size: 1.5rem;
-        }
-        select#word-count {
+#word-count {
+    font-size: 1.5rem;
+}
+select#word-count {
     background-color: var(--main-yellow);
     text-align: center;
 }
