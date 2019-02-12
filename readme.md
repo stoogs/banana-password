@@ -2,6 +2,8 @@
 
 A simple random password generator using dictionary words from a list of the top 30,000 words in the English language.
 
+![](Example 1.gif)
+
 -----------------First Run------------------------
 
 install git, install nodejs, install npm and clone repository.
