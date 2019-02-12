@@ -1,11 +1,9 @@
-<b>Banana Password</b>
+<h3 align="center">Banana Password</h3>
 
 A simple random password generator using dictionary words from a list of the top 30,000 words in the English language.
 
-![](Example-1.gif)
 ![](Example-2.gif)
-
-
+ 
 
 -----------------First Run------------------------
 
