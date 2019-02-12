@@ -3,7 +3,7 @@
 A simple random password generator using dictionary words from a list of the top 30,000 words in the English language.
 
 ![](Example-2.gif)
- 
+ <br><a href="http://www.bananapassword.com">Website</a>
 
 -----------------First Run------------------------
 
