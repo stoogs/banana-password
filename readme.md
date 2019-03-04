@@ -1,6 +1,10 @@
-<b>Banana Password</b>
+<h3 align="center">Banana Password</h3>
 
 A simple random password generator using dictionary words from a list of the top 30,000 words in the English language.
+[Passwords](https://www.theregister.co.uk/2019/02/14/password_length/) have never been so important in a world of [data breaches](https://www.theguardian.com/technology/2019/jan/17/breached-data-largest-collection-ever-seen-email-password-hacking).
+
+![](Example-2.gif)
+ <br><a href="http://www.bananapassword.com">Website</a>
 
 -----------------First Run------------------------
 
@@ -40,3 +44,7 @@ XKCD - https://xkcd.com/936/
 
 Computerphile ep. 'How to Choose a Password'
 https://www.youtube.com/watch?v=3NjQ9b3pgIg
+
+<p align="center">
+  <img />
+</p>
