@@ -20,7 +20,7 @@
 body {
     background-color: var(--main-bg);
     /*margin-right: 8px;*/
-    max-width: 1024px;  /*iPad Pro res*/
+    max-width: 768px;  /*iPad res*/
     margin-left:auto;
     margin-right:auto;
     margin-top: 0;
@@ -32,7 +32,7 @@ h2 {
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 0 1fr 0.25fr 0.25fr 0.1fr;
+    grid-template-rows: 0 0.4fr 0.25fr 0.25fr 0.1fr;
     grid-template-areas:
             "Heading Heading Heading"
             "Reserved-1 Logo Reserved-2"
@@ -65,7 +65,7 @@ h2 {
 }
 
 .Logo { grid-area: Logo;
-    width: 50vw;
+    width: 360px;
     align-content: center;
 }
 .Logo:hover {
@@ -147,7 +147,9 @@ select#word-count {
     font-size: 3rem;
     width: -webkit-fill-available;
     word-wrap: break-word;
+    margin-top: 30px;
 }
 
 .Footer { grid-area: Footer; text-align: center;
-    font-size: 2rem;}
+    font-size: 1.5rem;
+}

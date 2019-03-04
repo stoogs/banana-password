@@ -3,6 +3,8 @@ const top1kWords = require('../../dictionary/top1kWords');
 const top10kWords = require('../../dictionary/top10kWords');
 const top20kWords = require('../../dictionary/top20kWords');
 const top30kWords = require('../../dictionary/top30kWords');
+//import password tester library
+const taiPasswordStrength = require("tai-password-strength");
 
 const Password = function () {
 //ALL USER SELECTED VARIABLES INITIALIZED AS DEFAULT HERE
@@ -17,7 +19,7 @@ const Password = function () {
     this.cleanWords = "clean";  //LIST OF ALL THE WORDS TO CHOOSE FROM
     this.arrayOfFilteredWords = []; //ARRAY OF FINAL WORDS
     this.passwordString = "makString()";
-    this.finishedPassword ="error"
+    this.finishedPassword = "error";
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -171,10 +173,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
             //DISPLAY ADDITIONAL INFORMATION IN FOOTER
             let footerInformation = document.querySelector(".Footer");
-            footerInformation.innerHTML = `<h4></h4><br><br>${this.passwordString.length} Characters chosen from ${this.cleanWords.length} Words`
+            //DISPLAY PASSWORD STRENGTH DETAILS
+            let strengthTester = new taiPasswordStrength.PasswordStrength();
+            strengthTester.addTrigraphMap(taiPasswordStrength.trigraphs);
+            let strengthResult = strengthTester.check(this.passwordString);
+            console.log(strengthResult);
 
-
+            footerInformation.innerHTML = 
+                `</br>This password is <br> ${strengthResult.strengthCode} ~ 2^${strengthResult.nistEntropyBits} Entropy Bits
+            </br>
+                ${this.passwordString.length} Characters chosen from ${this.cleanWords.length} Words`
         }
-
+       
     }
 });

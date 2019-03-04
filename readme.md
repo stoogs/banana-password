@@ -25,3 +25,6 @@ npm run build
 +
 nodemon run server:dev
 ```
+
+LATEST NPM Installed
+npm install --save tai-password-strength
