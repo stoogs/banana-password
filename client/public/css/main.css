@@ -140,6 +140,7 @@ select#word-count {
     width: -webkit-fill-available;
     word-wrap: break-word;
     margin-top: 30px;
+    /* text-transform: capitalize; */
 }
 
 .Footer { grid-area: Footer; text-align: center;

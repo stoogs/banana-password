@@ -112,22 +112,10 @@ document.addEventListener('DOMContentLoaded', () => {
         function finalResult() {
             let result = [];
             let chosenWord = '';
-            let testChosenWord = [];
-
-
-
+            
             for (let i = 0; i < this.wordsRequired; i++) {
                 chosenWord = this.cleanWords[Math.floor(Math.random() * cleanWords.length)];
-
-                testChosenWord = chosenWord.split('');
-                for (let j=0; j < testChosenWord.length; j++) {
-                    if (testChosenWord[j] == "0") {
-                        console.log("***********NUMBER ALERT*******");
-                        console.log("***********BAD WORD WAS*******", chosenWord);
-                        chosenWord = this.cleanWords[Math.floor(Math.random() * cleanWords.length)];
-                        break;
-                    }
-                }
+                chosenWord = chosenWord.charAt(0).toUpperCase() + chosenWord.slice(1) //Capitalise
                 result.push(chosenWord)
             }
             this.arrayOfFilteredWords = result
@@ -193,7 +181,8 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(strengthResult);
 
             footerInformation.innerHTML = 
-                `</br>This password is <br> ${strengthResult.strengthCode} ~ 2^${strengthResult.nistEntropyBits} Entropy Bits
+                `</br> ${strengthResult.strengthCode} </br>
+                 ~${strengthResult.nistEntropyBits} bits of entropy
             </br>
                 ${this.passwordString.length} Characters chosen from ${this.cleanWords.length} Words`
         }
