@@ -45,6 +45,11 @@ XKCD - https://xkcd.com/936/
 Computerphile ep. 'How to Choose a Password'
 https://www.youtube.com/watch?v=3NjQ9b3pgIg
 
-<p align="center">
-  <img />
-</p>
+```
+npm run build
++
+nodemon run server:dev
+```
+
+LATEST NPM Installed
+npm install --save tai-password-strength
