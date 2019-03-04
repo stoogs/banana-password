@@ -31,7 +31,7 @@ h2 {
 }
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0 0.4fr 0.25fr 0.25fr 0.1fr;
     grid-template-areas:
             "Heading Heading Heading"
@@ -65,7 +65,8 @@ h2 {
 }
 
 .Logo { grid-area: Logo;
-    width: 360px;
+    width: 300px;
+    height: 300px;
     align-content: center;
 }
 .Logo:hover {
@@ -77,6 +78,13 @@ h2 {
 .Logo:active {
     background-color: var(--main-bg-brown) ;
     border-radius: 50%;
+}
+
+.Logo img {
+    width:240px;
+    height:240px;
+    margin: 0 30px;
+    padding-bottom: 40px;
 }
 
 .Reserved-2 { grid-area: Reserved-2;
