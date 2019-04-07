@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //RUN FUNCTIONS SYNCHRONOUSLY
     function bananaClicked() {
+        console.time('Clicked Banana')
         /*OK*/getUserChoices();  //NUM WORDS, WORD LENGTH, BREAK CHR, L33T, WORDCOUNT
         /*OK*/createWordList(); //MAKE 1K-30K WORDLIST
         /*OK*/prepareWords(); //FILTER TO LENGTH, REGEX TO a-Z
@@ -38,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(this.arrayOfFilteredWords);//TODO ARRAY OF WORDS TO CLICK AND CHANGE INDIVIDUALLY
         l33tFunction();
         displayPassword();
-
+        console.timeEnd('Clicked Banana')
         //FUNCTIONS FROM beginFiltering function
         function getUserChoices() {
             //Get value from word-form
