@@ -6,7 +6,22 @@ A simple random password generator using dictionary words from a list of the top
 ![](Example-2.gif)
  <br><a href="http://www.bananapassword.com">Website</a>
 
------------------First Run------------------------
+-----------------Docker Run------------------------
+Build Image
+ docker image build -t banana-password .
+Run Image
+ docker container run --rm --name banana-password --publish 3000:3000 banana-password
+Go to
+ 127.0.0.1:3000
+Stop Image
+ docker container stop banana-password
+Remove image
+ docker rmi -f banana-password
+
+-----------------Docker Run------------------------
+
+
+-----------------Local Run------------------------
 
 install git, install nodejs, install npm and clone repository.
 
