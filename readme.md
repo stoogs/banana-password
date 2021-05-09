@@ -7,18 +7,26 @@ A simple random password generator using dictionary words from a list of the top
  <br><a href="http://www.bananapassword.com">Website</a>
 
 -----------------Docker Run------------------------
-Build Image
- docker image build -t banana-password .
-Run Image
- docker container run --rm --name banana-password --publish 3000:3000 banana-password
-Go to
- 127.0.0.1:3000
-Stop Image
- docker container stop banana-password
-Remove image
- docker rmi -f banana-password
 
------------------Docker Run------------------------
+Build Image
+
+ `docker image build -t banana-password .`
+ 
+Run Image
+
+ `docker container run --rm --name banana-password --publish 3000:3000 banana-password`
+ 
+Go to
+
+`127.0.0.1:3000`
+ 
+Stop Image
+
+ `docker container stop banana-password`
+ 
+Remove image
+
+ `docker rmi -f banana-password`
 
 
 -----------------Local Run------------------------
