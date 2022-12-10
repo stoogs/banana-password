@@ -14,7 +14,7 @@
   "keywords": [],
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "nodemon": "^2.0.7",
     "require": "^2.4.20",
     "tai-password-strength": "^1.1.1"
